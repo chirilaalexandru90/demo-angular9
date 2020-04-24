@@ -9,6 +9,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContentComponent } from './layout/content/content.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
+import { HomeModule } from './layout/home-module/home.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
-    // HomeModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
