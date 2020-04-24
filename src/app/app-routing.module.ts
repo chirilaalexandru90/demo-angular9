@@ -1,6 +1,6 @@
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { ContentComponent } from './layout/content/content.component';
-import { HomeComponent } from './layout/home/home.component';
+import { HomeComponent } from './layout/home-module/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
