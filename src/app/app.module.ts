@@ -7,16 +7,16 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ContentComponent } from './layout/content/content.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { HomeModule } from './layout/home-module/home.module';
+import { ProductsComponent } from './layout/products/all-products.component';
+import { HeaderModule } from './layout/header/header.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
-    ContentComponent,
+    ProductsComponent,
     NotFoundComponent
   ],
   imports: [
@@ -24,7 +24,8 @@ import { HomeModule } from './layout/home-module/home.module';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

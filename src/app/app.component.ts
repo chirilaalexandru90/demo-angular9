@@ -15,9 +15,9 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.activatedRoute.queryParams.subscribe(params => {
-      console.log(params, params.name)
-      this.name = params.name;
-    });
+    // this.activatedRoute.queryParams.subscribe(params => {
+    //   console.log(params, params.name)
+    //   this.name = params.name;
+    // });
   }
 }
