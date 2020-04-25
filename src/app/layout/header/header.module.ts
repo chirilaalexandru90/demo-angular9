@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { NgModule } from '@angular/core';
 import { SearchAreaComponent } from './search-area/search-area.component';
+import { UserCartComponent } from './user-cart/user-cart.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     LanguageWrapperComponent,
-    SearchAreaComponent
+    SearchAreaComponent,
+    UserCartComponent
   ],
   imports: [
     CommonModule
