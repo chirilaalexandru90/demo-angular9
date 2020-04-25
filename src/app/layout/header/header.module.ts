@@ -1,11 +1,11 @@
-import { LanguageWrapperComponent } from './language-wrapper/language-wrapper.component';
+import { LanguageWrapperComponent } from './language-wrapper/language-wrapper';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header.component';
+import { HeaderComponent } from './header';
 import { NgModule } from '@angular/core';
-import { SearchAreaComponent } from './search-area/search-area.component';
-import { UserCartComponent } from './user-cart/user-cart.component';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
-import { LogoAndNavigationComponent } from './logo-and-navigation/logo-and-navigation.component';
+import { SearchAreaComponent } from './search-area/search-area';
+import { UserCartComponent } from './user-cart/user-cart';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu';
+import { LogoAndNavigationComponent } from './logo-and-navigation/logo-and-navigation';
 
 @NgModule({
   declarations: [

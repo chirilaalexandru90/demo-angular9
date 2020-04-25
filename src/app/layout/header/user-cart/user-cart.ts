@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-cart',
-  templateUrl: './user-cart.component.html'
+  templateUrl: './user-cart.html'
 })
 
 export class UserCartComponent implements OnInit {
