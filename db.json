@@ -1,0 +1,146 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-01.jpg",
+      "category": "Woman",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 49.99,
+      "imgUrl": "img-03.jpg",
+      "category": "Woman",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "price": 49.99,
+      "imgUrl": "img-03.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 4,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-04.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 5,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-05.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 6,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-06.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 7,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-07.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "id": 8,
+      "title": "Product 1",
+      "price": 49.99,
+      "imgUrl": "img-08.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "title": "Product 9",
+      "price": 21.93,
+      "imgUrl": "img-04.jpg",
+      "id": 9,
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "title": "Leather Jacket",
+      "price": 34.86,
+      "imgUrl": "img-08.jpg",
+      "id": 10,
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "title": "CFR T-shirt",
+      "price": 123.99,
+      "imgUrl": "img-02.jpg",
+      "id": 11,
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "title": "Leather Jacket",
+      "price": 34,
+      "imgUrl": "img-03.jpg",
+      "id": 12,
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "title": "Some product",
+      "price": 2,
+      "imgUrl": "img-08.jpg",
+      "id": 13,
+      "category": "Man",
+      "items_in_stock": 2,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    },
+    {
+      "title": "Red Pants",
+      "price": 12,
+      "imgUrl": "img-08.jpg",
+      "category": "Man",
+      "items_in_stock": 2,
+      "id": 14,
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo..."
+    }
+  ],
+  "user": {
+    "id": "324352454254652",
+    "name": "Ascultewa Listpro",
+    "is_admin": true,
+    "is_authenticated": true
+  },
+  "cart": [
+    {
+      "productId": 14,
+      "title": "Red Pants",
+      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+      "imgUrl": "img-08.jpg",
+      "items_in_stock": 2,
+      "price": "120"
+    }
+  ]
+}

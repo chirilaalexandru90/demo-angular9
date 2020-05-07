@@ -6,6 +6,7 @@ import { SearchAreaComponent } from './search-area/search-area';
 import { UserCartComponent } from './user-cart/user-cart';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu';
 import { LogoAndNavigationComponent } from './logo-and-navigation/logo-and-navigation';
+import { CartEntry } from './user-cart/cart-entry/cart-entry';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LogoAndNavigationComponent } from './logo-and-navigation/logo-and-navig
     SearchAreaComponent,
     UserCartComponent,
     MobileMenuComponent,
-    LogoAndNavigationComponent
+    LogoAndNavigationComponent,
+    CartEntry
   ],
   imports: [
     CommonModule
