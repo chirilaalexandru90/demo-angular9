@@ -4,9 +4,9 @@ import { HeaderComponent } from './header';
 import { NgModule } from '@angular/core';
 import { SearchAreaComponent } from './search-area/search-area';
 import { UserCartComponent } from './user-cart/user-cart';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu';
 import { LogoAndNavigationComponent } from './logo-and-navigation/logo-and-navigation';
 import { CartEntry } from './user-cart/cart-entry/cart-entry';
+import { MobileMenuComponent } from './logo-and-navigation/mobile-menu/mobile-menu';
 
 @NgModule({
   declarations: [
