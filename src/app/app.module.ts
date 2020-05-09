@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { HeaderComponent } from './layout/header/header';
 import { FooterComponent } from './layout/footer/footer';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './layout/not-found/not-found';
