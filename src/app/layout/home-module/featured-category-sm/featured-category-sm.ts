@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-featured-category-box-sm',
   templateUrl: './featured-category-sm.html'
 })
-export class FeaturedCategorySmallComponent implements OnInit {
+export class FeaturedCategorySmComponent implements OnInit {
 
   constructor() { }
 
