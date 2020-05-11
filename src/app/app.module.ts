@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 import { FooterComponent } from './layout/footer/footer';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './layout/not-found/not-found';
-import { HomeModule } from './layout/home-module/home.module';
+import { HomeModule } from './layout/home/home.module';
 import { ProductsComponent } from './layout/products/all-products';
 import { HeaderModule } from './layout/header/header.module';
 

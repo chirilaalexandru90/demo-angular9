@@ -23,11 +23,11 @@
       </div>
 
       <div class="col-md-4 col-sm-4 col-xs-12">
-        <div *ngFor="let cat of listOfSmallCategories">
+        <div *ngFor="let category of listOfSmallCategories">
           <app-featured-category-box-sm
-            [title]="cat.title"
-            [description]="cat.description"
-            [image]="cat.image">
+            [title]="category.title"
+            [description]="category.description"
+            [image]="category.image">
           </app-featured-category-box-sm>
         </div>
       </div>
