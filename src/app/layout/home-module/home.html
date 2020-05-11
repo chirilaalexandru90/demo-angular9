@@ -13,33 +13,23 @@
 <section class="feature-categories section">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-12">
-        <app-featured-category-box-lg></app-featured-category-box-lg>
+      <div class="col-md-4 col-sm-4 col-xs-12"
+        *ngFor="let category of listOfLargeCategories">
+        <app-featured-category-box-lg
+          [title]="category.title"
+          [description]="category.description"
+          [image]="category.image">
+        </app-featured-category-box-lg>
       </div>
+
       <div class="col-md-4 col-sm-4 col-xs-12">
-        <!-- <div class="feature-item-content">
-          <img src="assets/img/feature/img3.jpg" alt="">
-          <div class="feature-content">
-            <div class="banner-text">
-              <h4>Women's Clothing</h4>
-              <p>Up to <span>70%</span> OFF</p>
-            </div>
-            <a href="#" class="btn btn-common">Shop Now</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-12">
-        <app-featured-category-box-sm></app-featured-category-box-sm>
-        <!-- <div class="feature-item-content">
-          <img src="assets/img/feature/img4.jpg" alt="">
-          <div class="feature-content">
-            <div class="banner-text accessories">
-              <h4>Kids Essentials</h4>
-              <p>Best Collection for Kids</p>
-            </div>
-            <a href="#" class="btn btn-common">Shop Now</a>
-          </div>
-        </div> -->
+        <div *ngFor="let cat of listOfSmallCategories">
+          <app-featured-category-box-sm
+            [title]="cat.title"
+            [description]="cat.description"
+            [image]="cat.image">
+          </app-featured-category-box-sm>
+        </div>
       </div>
     </div>
   </div>

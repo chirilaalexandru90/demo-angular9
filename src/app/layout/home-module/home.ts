@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SERVICES_LIST } from './services-box/services-list.model';
+import { SERVICES_LIST } from './models/services-list.model';
+import { FT_CATEGORY_LG_LIST } from './models/featured-category-lg-list';
+import { FT_CATEGORY_SM_LIST } from './models/featured-category-sm-list';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,8 @@ import { SERVICES_LIST } from './services-box/services-list.model';
 })
 export class HomeComponent implements OnInit {
   servicesList = SERVICES_LIST;
+  listOfLargeCategories = FT_CATEGORY_LG_LIST;
+  listOfSmallCategories = FT_CATEGORY_SM_LIST;
 
   constructor() { }
 
