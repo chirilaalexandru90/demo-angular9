@@ -12,13 +12,14 @@ import { HomeModule } from './layout/home/home.module';
 import { ProductsComponent } from './layout/products/all-products';
 import { HeaderModule } from './layout/header/header.module';
 import { SignupComponent } from './layout/auth/signup/signup';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { LoginComponent } from './layout/auth/login/login';
 @NgModule({
   imports: [
     MatFormFieldModule,
@@ -43,13 +44,15 @@ export class MaterialModule { }
     FooterComponent,
     ProductsComponent,
     NotFoundComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     MaterialModule,
     FlexLayoutModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,

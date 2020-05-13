@@ -1,48 +1,27 @@
-<section class="section sign-up-form">
+<section class="section">
   <div class="sign-up-form">
-    <form fxLayout="column" fxLayoutAlign="center center">
+
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" [formGroup]="signupForm"
+      (ngSubmit)="onSubmit()">
+      <h3>Sign Up</h3>
+
       <mat-form-field>
-        <input
-          type="email"
-          matInput
-          placeholder="Your e-mail"
-          name="email"
-          ngModel
-          email
-          required
-          #emInput="ngModel">
-        <mat-error *ngIf="emInput.hasError('required') && emInput.value?.length > 0">E-mail is invalid</mat-error>
-        <mat-error *ngIf="emInput.value?.length < 1">Field is empty</mat-error>
+        <input type="email" matInput placeholder="Your email" formControlName="email">
+        <!-- <mat-error>E-mail is invalid</mat-error>
+        <mat-error>Field is empty</mat-error> -->
       </mat-form-field>
-      <mat-form-field hintLabel="Minimum 6 characters">
-        <input
-          type="password"
-          matInput
-          placeholder="Your password"
-          name="password"
-          ngModel
-          password
-          required
-          minlength="6"
-          #pwInput="ngModel">
-        <mat-hint *ngIf="pwInput.value?.lenght > 0" align="end">{{ pwInput.value?.length }} / 6</mat-hint>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Your password" minlength="6" formControlName="password">
+        <!-- <mat-hint align="end">Minimum 6 characters</mat-hint> -->
       </mat-form-field>
       <mat-form-field>
         <mat-label>Add birthday</mat-label>
-        <input
-          matInput
-          name="brithday"
-          placeholder="Your birthday"
-          [matDatepicker]="picker"
-          required
-          [max]="maxDate"
-          ngModel>
+        <input type="text" matInput placeholder="Your birthday" [matDatepicker]="picker" formControlName="birthday"
+          [max]="maxDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-      <mat-checkbox ngModel name="agree" required color="primary">
-        Agree to terms and conditions</mat-checkbox>
-      <button type="submit" mat-raised-button color="primary">Submit</button>
+      <button class="btn btn-common" type="submit" mat-raised-button color="primary">Submit</button>
     </form>
   </div>
 </section>
