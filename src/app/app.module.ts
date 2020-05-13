@@ -1,43 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { FooterComponent } from './layout/footer/footer';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { NotFoundComponent } from './layout/not-found/not-found';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
 import { HomeModule } from './layout/home/home.module';
 import { ProductsComponent } from './layout/products/all-products';
 import { HeaderModule } from './layout/header/header.module';
+import { FooterComponent } from './layout/footer/footer';
+import { NotFoundComponent } from './layout/not-found/not-found';
+import { AuthService } from './layout/auth/auth.service';
 import { SignupComponent } from './layout/auth/signup/signup';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { LoginComponent } from './layout/auth/login/login';
-@NgModule({
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatCheckboxModule
-  ],
-  exports: [
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
-  declarations: [
-  ],
-})
-export class MaterialModule { }
+import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,18 +29,22 @@ export class MaterialModule { }
     LoginComponent
   ],
   imports: [
+    CommonModule,
     MaterialModule,
     FlexLayoutModule,
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
     HomeModule,
     HeaderModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

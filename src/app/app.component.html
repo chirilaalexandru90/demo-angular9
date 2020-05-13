@@ -1,11 +1,25 @@
 <app-header></app-header>
-
-<button routerLink="/home" routerLinkActive="active">Home</button>
-<button routerLink="/products" routerLinkActive="active">Products</button>
-<button routerLink="/signup" routerLinkActive="active">Sign Up</button>
-<button routerLink="/login" routerLinkActive="active">Login</button>
-
-
-
+<div fxLayout="row" fxLayoutAlign="center">
+  <ul>
+    <li>
+      <a href="index.html" class="navbar-brand"><img src="../assets/img/logo.png" alt=""></a>
+    </li>
+    <li>
+      <a routerLink="/home" routerLinkActive="active"> - Home - </a>
+    </li>
+    <li>
+      <a routerLink="/products" routerLinkActive="active"> - Products - </a>
+    </li>
+    <li>
+      <a *ngIf="!isAuth" class="btn btn-common" routerLink="/signup" routerLinkActive="active"> - Sign Up - </a>
+    </li>
+    <li>
+      <a *ngIf="!isAuth" class="btn btn-common" routerLink="/login" routerLinkActive="active"> - Login - </a>
+    </li>
+    <li>
+      <a *ngIf="isAuth" class="btn btn-danger"> - Log Out - </a>
+    </li>
+  </ul>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
