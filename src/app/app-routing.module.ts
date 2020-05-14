@@ -5,6 +5,7 @@ import { NotFoundComponent } from './layout/not-found/not-found';
 import { HomeComponent } from './layout/home/home';
 import { SignupComponent } from './layout/auth/signup/signup';
 import { LoginComponent } from './layout/auth/login/login';
+import { MyAccountComponent } from './layout/account/my-account';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'account', component: MyAccountComponent },
   { path: '**', component: NotFoundComponent },
 ];
 @NgModule({
