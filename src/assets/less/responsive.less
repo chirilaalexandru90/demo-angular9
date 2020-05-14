@@ -1,8 +1,8 @@
 // Preset Loader
 @import "presets.less";
 
-// Portrait tablet to landscape and desktop 
-@media (min-width: 768px) and (max-width: 1024px) { 
+// Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 1024px) {
 	.section-title{
 		font-size: 30px;
 		margin-bottom: 22px;
@@ -28,7 +28,7 @@
 	.navbar-default .navbar-nav > li > a{
 		padding: 10px 13px;
 		text-transform: capitalize;
-	}	
+	}
 	.categories-wrapper .block-title{
 		font-size: 13px;
 	}
@@ -37,7 +37,7 @@
 	}
 	#carousel-area .carousel-control{
 		top: 45%;
-	}	
+	}
 	.navbar-default .megamenu1{
 		width: 450px;
 		max-width: 450px;
@@ -173,6 +173,15 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.hidden-mobile{
+		display: none;
+	}
+	.link-inline{
+		padding: 8px 10px;
+	}
+}
+
 @media (max-width: 640px) {
 	.section-title{
 		font-size: 24px;
@@ -185,14 +194,14 @@
 		display: none;
 	}
 	.search-area{
-		width: 38%;
+		// width: 38%;
 	}
 	.search-area .search-field{
 		width: 78%;
 	}
 	.language-wrapper a{
 		display: none;
-	}	
+	}
 	.search-area .categories-filter{
 		display: none;
 	}
@@ -307,8 +316,8 @@
 	}
 }
 
-// phones 
-@media (max-width: 480px) { 
+// phones
+@media (max-width: 480px) {
 	.box-language, .box-currency{
 		margin-right: 0;
 	}
@@ -320,15 +329,9 @@
 	}
 	.language-wrapper a{
 		display: none;
-	}	
+	}
 	.search-area .categories-filter{
 		display: none;
-	}
-	.hidden-mobile{
-		display: none;
-	}
-	.link-inline{
-		padding: 8px 14px;
 	}
 	.navbar-default .navbar-brand{
 		position: absolute;
