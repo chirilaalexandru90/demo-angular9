@@ -23,5 +23,17 @@
 <!-- shopping cart end -->
 
 <div class="account link-inline">
-  <a href="login-form.html"><i class="icon-login"></i><span class="hidden-mobile">login/register</span></a>
+  <a *ngIf="!isAuth"
+    routerLink="/signup"
+    routerLinkActive="active"
+    (click)="register()">
+    <i class="icon-login"></i><span class="hidden-mobile">login/register</span>
+  </a>
+  <a *ngIf="isAuth"
+    class="sign-out"
+    routerLink="/signup"
+    routerLinkActive="active"
+    (click)="logOut()">
+    <i class="icon-login"></i><span class="hidden-mobile">Sign Out</span>
+  </a>
 </div>

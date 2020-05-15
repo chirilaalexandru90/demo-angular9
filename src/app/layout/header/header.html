@@ -9,7 +9,7 @@
         </div> -->
         <div class="col-md-12 col-sm-12">
           <app-search-area></app-search-area>
-          <app-user-cart></app-user-cart>
+          <app-user-cart [isAuth]="isAuth"></app-user-cart>
         </div>
       </div>
     </div>
@@ -18,5 +18,13 @@
 
   <!-- Start  Logo & Naviagtion  -->
   <!-- <app-logo-and-navigation></app-logo-and-navigation> -->
+
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <a  class="btn btn-common" routerLink="/home" class="navbar-brand"><img src="../assets/img/logo.png" alt=""></a>
+    <a  class="btn btn-common" routerLink="/products" routerLinkActive="active">Products</a>
+    <a *ngIf="!isAuth" class="btn btn-common" routerLink="/signup" routerLinkActive="active">Sign Up</a>
+    <a *ngIf="!isAuth" class="btn btn-common" routerLink="/login" routerLinkActive="active">Login</a>
+    <a *ngIf="isAuth" class="btn btn-danger">Log Out</a>
+  </div>
 </div>
 <!-- Header Section End -->

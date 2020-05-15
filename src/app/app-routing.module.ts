@@ -8,7 +8,7 @@ import { LoginComponent } from './layout/auth/login/login';
 import { MyAccountComponent } from './layout/account/my-account';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },

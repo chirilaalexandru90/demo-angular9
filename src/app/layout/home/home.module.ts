@@ -6,6 +6,8 @@ import { FeaturedCategoryLgComponent } from './featured-category-lg/featured-cat
 import { FeaturedCategorySmComponent } from './featured-category-sm/featured-category-sm';
 import { BlogItemBoxComponent } from './blog-item-box/blog-item-box';
 import { ServicesBoxComponent } from './services-box/services-box';
+import { MaterialModule } from 'src/app/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ServicesBoxComponent } from './services-box/services-box';
     ServicesBoxComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    FlexLayoutModule,
   ]
 })
 export class HomeModule { }
