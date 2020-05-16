@@ -9,9 +9,8 @@ export class AuthService {
   private user: User;
   userIsLoggedIn = new Subject<boolean>();
 
-  constructor(private router: Router) {
+  constructor(private router: Router) { }
 
-  }
   registerUser(authData: AuthData) {
     this.user = {
       email: authData.email,

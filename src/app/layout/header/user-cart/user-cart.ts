@@ -19,7 +19,7 @@ export class UserCartComponent implements OnInit {
   }
 
   register() {
-    this.router.navigate(['signup']);
+    this.router.navigate(['login']);
   }
 
   logOut() {

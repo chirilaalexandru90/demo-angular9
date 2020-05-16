@@ -27,13 +27,11 @@
     routerLink="/signup"
     routerLinkActive="active"
     (click)="register()">
-    <i class="icon-login"></i><span class="hidden-mobile">login/register</span>
+    <i class="icon-login"></i><span class="hidden-mobile">Login/Register</span>
   </a>
   <a *ngIf="isAuth"
     class="sign-out"
-    routerLink="/signup"
-    routerLinkActive="active"
     (click)="logOut()">
-    <i class="icon-login"></i><span class="hidden-mobile">Sign Out</span>
+    <i class="icon-login"></i><span class="hidden-mobile">Log Out</span>
   </a>
 </div>

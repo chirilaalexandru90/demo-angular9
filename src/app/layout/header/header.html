@@ -20,11 +20,14 @@
   <!-- <app-logo-and-navigation></app-logo-and-navigation> -->
 
   <div fxLayout="row" fxLayoutAlign="space-around center">
+    <h2>TEST NAVBAR</h2>
     <a  class="btn btn-common" routerLink="/home" class="navbar-brand"><img src="../assets/img/logo.png" alt=""></a>
     <a  class="btn btn-common" routerLink="/products" routerLinkActive="active">Products</a>
     <a *ngIf="!isAuth" class="btn btn-common" routerLink="/signup" routerLinkActive="active">Sign Up</a>
     <a *ngIf="!isAuth" class="btn btn-common" routerLink="/login" routerLinkActive="active">Login</a>
     <a *ngIf="isAuth" class="btn btn-danger">Log Out</a>
+    <a routerLink="/account" routerLinkActive="active" class="btn btn-sm btn-warning">account</a>
+
   </div>
 </div>
 <!-- Header Section End -->

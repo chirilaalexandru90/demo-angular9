@@ -16,18 +16,15 @@ import { HeaderModule } from './layout/header/header.module';
 import { FooterComponent } from './layout/footer/footer';
 import { NotFoundComponent } from './layout/not-found/not-found';
 import { AuthService } from './layout/auth/auth.service';
-import { SignupComponent } from './layout/auth/signup/signup';
-import { LoginComponent } from './layout/auth/login/login';
 import { MaterialModule } from './material.module';
 import { AuthModule } from './layout/auth/auth.module';
+import { HeaderComponent } from './layout/header/header';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     ProductsComponent,
-    NotFoundComponent,
-    // SignupComponent,
-    // LoginComponent
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +44,7 @@ import { AuthModule } from './layout/auth/auth.module';
   providers: [
     AuthService
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, HeaderComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ],
