@@ -25,8 +25,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-    AppRoutingModule,
-
+    AppRoutingModule
   ]
 })
 export class HeaderModule { }

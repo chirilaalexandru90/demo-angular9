@@ -19,14 +19,15 @@ import { AuthService } from './layout/auth/auth.service';
 import { SignupComponent } from './layout/auth/signup/signup';
 import { LoginComponent } from './layout/auth/login/login';
 import { MaterialModule } from './material.module';
+import { AuthModule } from './layout/auth/auth.module';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     ProductsComponent,
     NotFoundComponent,
-    SignupComponent,
-    LoginComponent
+    // SignupComponent,
+    // LoginComponent
   ],
   imports: [
     CommonModule,
@@ -39,8 +40,9 @@ import { MaterialModule } from './material.module';
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
-    HomeModule,
-    HeaderModule
+    HeaderModule,
+    AuthModule,
+    HomeModule
   ],
   providers: [
     AuthService

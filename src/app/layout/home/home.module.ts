@@ -22,6 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-  ]
+  ],
+  bootstrap: [HomeComponent]
 })
 export class HomeModule { }
