@@ -19,6 +19,7 @@ import { AuthService } from './layout/auth/auth.service';
 import { MaterialModule } from './material.module';
 import { AuthModule } from './layout/auth/auth.module';
 import { HeaderComponent } from './layout/header/header';
+import { ProductsService } from './shared/services/products.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { HeaderComponent } from './layout/header/header';
     HomeModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ProductsService
   ],
   bootstrap: [AppComponent, HeaderComponent],
   schemas: [
