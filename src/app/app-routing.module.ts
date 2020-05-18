@@ -7,6 +7,7 @@ import { SignupComponent } from './layout/auth/signup/signup';
 import { LoginComponent } from './layout/auth/login/login';
 import { MyAccountComponent } from './layout/account/my-account';
 import { AuthGuard } from './layout/auth/auth.guard';
+import { NewProductComponent } from './layout/admin/new-product/new-product';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,6 +19,10 @@ const routes: Routes = [
     path: 'account',
     component: MyAccountComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'add-new-product',
+    component: NewProductComponent
   },
   { path: '**', component: NotFoundComponent },
 ];

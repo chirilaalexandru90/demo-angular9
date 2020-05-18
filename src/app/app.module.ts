@@ -20,6 +20,7 @@ import { MaterialModule } from './material.module';
 import { AuthModule } from './layout/auth/auth.module';
 import { HeaderComponent } from './layout/header/header';
 import { ProductsService } from './shared/services/products.service';
+import { AdminModule } from './layout/admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { ProductsService } from './shared/services/products.service';
     AppRoutingModule,
     HeaderModule,
     AuthModule,
-    HomeModule
+    AdminModule,
+    HomeModule,
   ],
   providers: [
     AuthService,

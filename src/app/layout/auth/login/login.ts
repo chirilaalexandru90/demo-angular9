@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './login.html'
 })
 export class LoginComponent implements OnInit {
-  loginForm;
+  loginForm: FormGroup;
 
   constructor(
     private authService: AuthService

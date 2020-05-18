@@ -6,7 +6,7 @@ export interface Product {
   price: number;
   sex: 'man' | 'woman' | null;
   categoryList: Array<string>;
-  items_in_stock: number;
-  date_added?: Date;
+  itemsInStock: number;
+  dateAdded?: Date;
   resealed: boolean;
 }

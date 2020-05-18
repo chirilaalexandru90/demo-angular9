@@ -17,8 +17,8 @@
             <mat-form-field>
               <mat-label>Description</mat-label>
               <input type="text" matInput placeholder="Description" minlength="6" formControlName="description">
-              <mat-hint align="end">Minimum 6 characters</mat-hint>
-              <mat-error>Field is empty</mat-error>
+              <!-- <mat-hint align="end">Minimum 6 characters</mat-hint> -->
+              <mat-error>Please add a description with more than 6 characters</mat-error>
             </mat-form-field>
 
 
@@ -48,14 +48,14 @@
 
             <mat-form-field>
               <mat-label>Add stock</mat-label>
-              <input type="number" matInput placeholder="Items in stock" formControlName="items_in_stock">
+              <input type="number" matInput placeholder="Items in stock" formControlName="itemsInStock">
               <mat-error>Field is empty</mat-error>
             </mat-form-field>
 
             <mat-form-field>
               <mat-label>Add date</mat-label>
               <input type="text" matInput placeholder="Date" [matDatepicker]="picker"
-                formControlName="date_added">
+                formControlName="dateAdded">
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -65,8 +65,7 @@
               <input type="text" matInput placeholder="radio true false" formControlName="resealed">
             </mat-form-field>
 
-            <button class="btn btn-common" type="submit" mat-raised-button color="primary">Submit</button>
-
+            <button class="btn btn-common" type="submit" mat-raised-button color="primary">Add</button>
             <br>
           </form>
         </div>

@@ -10,8 +10,8 @@ export class ProductsService {
       price: 49.99,
       sex: 'woman',
       categoryList: [],
-      items_in_stock: 23,
-      date_added: new Date(),
+      itemsInStock: 23,
+      dateAdded: new Date(),
       resealed: false
     },
     {
@@ -22,8 +22,8 @@ export class ProductsService {
       price: 49.99,
       sex: 'man',
       categoryList: [],
-      items_in_stock: 3,
-      date_added: new Date(),
+      itemsInStock: 3,
+      dateAdded: new Date(),
       resealed: true
     }
   ];
