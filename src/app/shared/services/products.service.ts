@@ -1,30 +1,30 @@
-import { Product } from './../models/product.model';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import { Product } from '../models/product.model';
 
+@Injectable(
+  //   {
+  //   providedIn: 'root'
+  // }
+)
 export class ProductsService {
-  products: Product[] = [
-    {
-      id: 1,
-      title: 'Product 1',
-      description: 'description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...',
-      imgUrl: 'img-01.jpg',
-      price: 49.99,
-      sex: 'woman',
-      categoryList: [],
-      itemsInStock: 23,
-      dateAdded: new Date(),
-      resealed: false
-    },
-    {
-      id: 2,
-      title: 'Product 2',
-      description: 'description - 2 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...',
-      imgUrl: 'img-02.jpg',
-      price: 49.99,
-      sex: 'man',
-      categoryList: [],
-      itemsInStock: 3,
-      dateAdded: new Date(),
-      resealed: true
-    }
-  ];
+  endpoint = 'http://localhost:4201/products';
+  constructor(private http: HttpClient) { }
+
+  getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.endpoint}/products`, {})
+      .pipe(map(response => response.map(product => Object.assign(new Product(), product))));
+  }
+
+  createProduct(productDto: Product) {
+    return this.http.post<void>(`${this.endpoint}/products`, productDto);
+  }
+
+  getProduct(productId: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.endpoint}/products/${productId}`, {})
+      .pipe(map(response => Object.assign(new Product(), response)));
+  }
 }
