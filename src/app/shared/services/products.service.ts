@@ -11,7 +11,7 @@ import { Product } from '../models/product.model';
   // }
 )
 export class ProductsService {
-  endpoint = 'http://localhost:4201/products';
+  endpoint = 'http://localhost:4201';
   constructor(private http: HttpClient) { }
 
   getAllProducts(): Observable<Product[]> {

@@ -1,6 +1,620 @@
 {
-  "products": [
+  "productsPerPage": [
     {
+      "_metadata": {
+        "page": 0,
+        "per_page": 8,
+        "page_count": 5,
+        "total_count": 40,
+        "Links": [{
+            "self": "/products?page=0&per_page=8"
+          },
+          {
+            "first": ""
+          },
+          {
+            "previous": ""
+          },
+          {
+            "next": "/products?page=1&per_page=8"
+          },
+          {
+            "last": "/products?page=20&per_page=8"
+          }
+        ]
+      },
+      "records": [
+        {
+          "id": 1,
+          "title": "Product 1",
+          "description": "description 1 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-01.jpg",
+          "price": 49.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 23,
+          "dateAdded": "",
+          "resealed": false
+        },
+        {
+          "id": 2,
+          "title": "Product 2",
+          "description": "description - 2 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-02.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 3,
+          "title": "Product 3",
+          "description": "description - 3 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-03.jpg",
+          "price": 39.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 4,
+          "title": "Product 4",
+          "description": "description - 4 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-04.jpg",
+          "price": 29.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 5,
+          "title": "Product 5",
+          "description": "description - 5 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-05.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 6,
+          "title": "Product 6",
+          "description": "description - 6 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-06.jpg",
+          "price": 9.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 7,
+          "title": "Product 7",
+          "description": "description - 7 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-07.jpg",
+          "price": 49.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 8,
+          "title": "Product 8",
+          "description": "description - 8 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-02.jpg",
+          "price": 5.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        }
+      ]
+    },
+    {
+      "_metadata": {
+        "page": 1,
+        "per_page": 8,
+        "page_count": 5,
+        "total_count": 40,
+        "Links": [{
+            "self": "/products?page=1&per_page=8"
+          },
+          {
+            "first": "/products?page=0&per_page=8"
+          },
+          {
+            "previous": "/products?page=0&per_page=8"
+          },
+          {
+            "next": "/products?page=2&per_page=8"
+          },
+          {
+            "last": "/products?page=20&per_page=8"
+          }
+        ]
+      },
+      "records": [
+        {
+          "id": 9,
+          "title": "Product 9",
+          "description": "description 9 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-06.jpg",
+          "price": 49.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 23,
+          "dateAdded": "",
+          "resealed": false
+        },
+        {
+          "id": 10,
+          "title": "Product 10",
+          "description": "description - 10 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-07.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 11,
+          "title": "Product 11",
+          "description": "description - 11 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-08.jpg",
+          "price": 39.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 12,
+          "title": "Product 12",
+          "description": "description - 12 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-05.jpg",
+          "price": 29.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 13,
+          "title": "Product 13",
+          "description": "description - 13 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-02.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 14,
+          "title": "Product 14",
+          "description": "description - 14 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-03.jpg",
+          "price": 9.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 15,
+          "title": "Product 15",
+          "description": "description - 16 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-04.jpg",
+          "price": 49.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 16,
+          "title": "Product 16",
+          "description": "description - 16 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-01.jpg",
+          "price": 5.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        }
+      ]
+    },
+    {
+      "_metadata": {
+        "page": 2,
+        "per_page": 8,
+        "page_count": 5,
+        "total_count": 40,
+        "Links": [
+          {
+            "self": "/products?page=2&per_page=8"
+          },
+          {
+            "first": "/products?page=0&per_page=8"
+          },
+          {
+            "previous": "/products?page=1&per_page=8"
+          },
+          {
+            "next": "/products?page=3&per_page=8"
+          },
+          {
+            "last": "/products?page=4&per_page=8"
+          }
+        ]
+      },
+      "records": [
+        {
+          "id": 17,
+          "title": "Product 17",
+          "description": "description 17 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-01.jpg",
+          "price": 49.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 23,
+          "dateAdded": "",
+          "resealed": false
+        },
+        {
+          "id": 18,
+          "title": "Product 18",
+          "description": "description - 18 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-03.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 19,
+          "title": "Product 19",
+          "description": "description - 19 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-02.jpg",
+          "price": 39.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 20,
+          "title": "Product 20",
+          "description": "description - 20 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-05.jpg",
+          "price": 29.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 21,
+          "title": "Product 21",
+          "description": "description - 21 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-04.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 22,
+          "title": "Product 22",
+          "description": "description - 22 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-07.jpg",
+          "price": 9.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 23,
+          "title": "Product 23",
+          "description": "description - 23 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-06.jpg",
+          "price": 49.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 24,
+          "title": "Product 24",
+          "description": "description - 24 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-08.jpg",
+          "price": 5.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        }
+      ]
+    },
+    {
+      "_metadata": {
+        "page": 3,
+        "per_page": 8,
+        "page_count": 5,
+        "total_count": 40,
+        "Links": [
+          {
+            "self": "/products?page=3&per_page=8"
+          },
+          {
+            "first": "/products?page=0&per_page=8"
+          },
+          {
+            "previous": "/products?page=2&per_page=8"
+          },
+          {
+            "next": "/products?page=4&per_page=8"
+          },
+          {
+            "last": ""
+          }
+        ]
+      },
+      "records": [
+        {
+          "id": 25,
+          "title": "Product 25",
+          "description": "description 25 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-08.jpg",
+          "price": 49.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 23,
+          "dateAdded": "",
+          "resealed": false
+        },
+        {
+          "id": 26,
+          "title": "Product 26",
+          "description": "description - 26 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-06.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 27,
+          "title": "Product 27",
+          "description": "description - 27 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-04.jpg",
+          "price": 39.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 28,
+          "title": "Product 28",
+          "description": "description - 28 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-02.jpg",
+          "price": 29.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 29,
+          "title": "Product 29",
+          "description": "description - 29 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-07.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 30,
+          "title": "Product 30",
+          "description": "description - 30 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-05.jpg",
+          "price": 9.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 31,
+          "title": "Product 31",
+          "description": "description - 31 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-03.jpg",
+          "price": 49.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 32,
+          "title": "Product 32",
+          "description": "description - 32 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-01.jpg",
+          "price": 5.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        }
+      ]
+    },
+    {
+      "_metadata": {
+        "page": 4,
+        "per_page": 8,
+        "page_count": 5,
+        "total_count": 40,
+        "Links": [
+          {
+            "self": "/products?page=4&per_page=8"
+          },
+          {
+            "first": "/products?page=0&per_page=8"
+          },
+          {
+            "previous": "/products?page=3&per_page=8"
+          },
+          {
+            "next": ""
+          },
+          {
+            "last": ""
+          }
+        ]
+      },
+      "records": [
+        {
+          "id": 33,
+          "title": "Product 33",
+          "description": "description 33 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-07.jpg",
+          "price": 49.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 23,
+          "dateAdded": "",
+          "resealed": false
+        },
+        {
+          "id": 34,
+          "title": "Product 34",
+          "description": "description - 34 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-05.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 35,
+          "title": "Product 35",
+          "description": "description - 35 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-03.jpg",
+          "price": 39.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 36,
+          "title": "Product 36",
+          "description": "description - 36 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-01.jpg",
+          "price": 29.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 37,
+          "title": "Product 37",
+          "description": "description - 37 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-08.jpg",
+          "price": 19.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 38,
+          "title": "Product 38",
+          "description": "description - 38 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-06.jpg",
+          "price": 9.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 39,
+          "title": "Product 39",
+          "description": "description - 39 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-04.jpg",
+          "price": 49.99,
+          "sex": "man",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        },
+        {
+          "id": 40,
+          "title": "Product 40",
+          "description": "description - 40 - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+          "imgUrl": "img-02.jpg",
+          "price": 5.99,
+          "sex": "woman",
+          "categoryList": [],
+          "itemsInStock": 3,
+          "dateAdded": "",
+          "resealed": true
+        }
+      ]
+    }
+  ],
+  "products": [{
       "id": 1,
       "title": "Product 1",
       "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
@@ -43,14 +657,12 @@
     "is_admin": true,
     "is_authenticated": true
   },
-  "cart": [
-    {
-      "productId": 14,
-      "title": "Red Pants",
-      "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
-      "imgUrl": "img-08.jpg",
-      "itemsInStock": 2,
-      "price": "120"
-    }
-  ]
+  "cart": [{
+    "productId": 14,
+    "title": "Red Pants",
+    "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
+    "imgUrl": "img-08.jpg",
+    "itemsInStock": 2,
+    "price": "120"
+  }]
 }
