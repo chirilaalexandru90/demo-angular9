@@ -8,8 +8,8 @@ import * as firebase from 'firebase';
 @Injectable()
 export class AuthService {
   private user: User;
-  userIsLoggedIn = new Subject<boolean>();
   private isAuthentificated = false;
+  userIsLoggedIn = new Subject<boolean>();
 
   constructor(private router: Router) { }
 
@@ -23,14 +23,16 @@ export class AuthService {
   login(authData: AuthData) {
     firebase.auth()
       .signInWithEmailAndPassword(authData.email, authData.password)
-      .then(() => this.authSuccessfully())
+      .then((res) => {
+        console.log(res);
+        this.authSuccessfully();
+      })
       .catch(error => console.log(error));
   }
 
   logout() {
     this.user = null;
     this.isAuthentificated = false;
-
     this.userIsLoggedIn.next(false);
   }
 

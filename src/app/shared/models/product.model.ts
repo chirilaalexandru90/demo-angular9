@@ -5,7 +5,7 @@ export class Product {
   imgUrl = '';
   price: number = null;
   // sex: 'man' | 'woman' | null = null;
-  sex = '';
+  sex: boolean;
   categoryList: Array<string> = [];
   itemsInStock: number = null;
   dateAdded?: Date = null;
@@ -17,7 +17,7 @@ export class Product {
     description?: string,
     imgUrl?: string,
     price?: number,
-    sex?: string,
+    sex?: boolean,
     categoryList?: Array<string>,
     itemsInStock?: number,
     dateAdded?: Date,

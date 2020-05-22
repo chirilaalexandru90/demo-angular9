@@ -48,7 +48,11 @@ import { AdminModule } from './layout/admin/admin.module';
     AuthService,
     ProductsService
   ],
-  bootstrap: [AppComponent, HeaderComponent],
+  bootstrap: [
+    AppComponent,
+    HeaderComponent,
+    ProductsService
+  ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ],

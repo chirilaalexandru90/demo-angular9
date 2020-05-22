@@ -614,7 +614,8 @@
       ]
     }
   ],
-  "products": [{
+  "products": [
+    {
       "id": 1,
       "title": "Product 1",
       "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
