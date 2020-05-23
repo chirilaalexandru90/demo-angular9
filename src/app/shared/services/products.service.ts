@@ -15,9 +15,36 @@ export class ProductsService {
       .pipe(map(response => response.map(product => Object.assign(new Product(), product))));
   }
 
+  getFeaturedProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.firebase}/featuredProducts.json`, {})
+      .pipe(map(response => {
+        const r = [];
+        for (const [key, value] of Object.entries(response)) {
+          r.push(Object.assign(new Product(), {
+            id: key,
+            title: value.title,
+            description: value.description,
+            imgUrl: value.imgUrl,
+            dateAdded: value.dateAdded,
+            itemsInStock: value.itemsInStock,
+            price: value.price,
+            resealed: value.resealed,
+            sex: value.sex,
+            categoryList: value.categoryList
+          }));
+        }
+        return r;
+      }
+      ));
+  }
+
   createProduct(productDto: Product) {
     // return this.http.post<void>(`${this.endpoint}/products`, productDto);
     return this.http.post(`${this.firebase}/products.json`, productDto);
+  }
+
+  modifyProduct() {
+
   }
 
   getProduct(productId: string): Observable<Product[]> {

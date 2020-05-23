@@ -42,8 +42,11 @@
     <h1 class="section-title">New Arrivals</h1>
     <hr class="lines">
     <div class="row">
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <app-product-item></app-product-item>
+      <div
+        class="col-md-3 col-sm-6 col-xs-12"
+        *ngFor="let fp of featuredProducts"
+      >
+        <app-product-item [product]="fp"></app-product-item>
       </div>
       <!-- <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="shop-product">
