@@ -17,18 +17,6 @@
   <!-- End Top Bar -->
 
   <!-- Start  Logo & Naviagtion  -->
-  <!-- <app-logo-and-navigation></app-logo-and-navigation> -->
-
-  <!-- <div fxLayout="row" fxLayoutAlign="space-around center">
-    <h2>TEST NAVBAR</h2>
-    <a class="btn btn-common" routerLink="/home" class="navbar-brand"><img src="../assets/img/logo.png" alt=""></a>
-    <a class="btn btn-common" routerLink="/products" routerLinkActive="active">Products</a>
-    <a *ngIf="!isAuth" routerLink="/signup" routerLinkActive="active">Sign Up</a>
-    <a *ngIf="!isAuth" routerLink="/login" routerLinkActive="active">Login</a>
-    <a *ngIf="isAuth" class="btn btn-danger">Log Out</a>
-    <a routerLink="/account" routerLinkActive="active" class="btn btn-sm btn-warning">Account Page</a>
-    <a routerLink="/new-product" routerLinkActive="active" class="btn btn-sm btn-info">New Product</a>
-  </div> -->
   <div style="background-color: #f8f9fa;">
     <div class="container">
       <div class="row">
@@ -67,14 +55,11 @@
                   <a class="nav-link" routerLink="/new-product" routerLinkActive="active">New Product</a>
                 </li>
               </ul>
-              <ul class="form-inline my-2 my-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" *ngIf="!isAuth" routerLink="/signup" routerLinkActive="active">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" *ngIf="!isAuth" routerLink="/login" routerLinkActive="active">Log In</a>
-                </li>
-              </ul>
+              <div class="form-inline my-2 my-lg-0" fxLayout="row" fxLayoutAlign="center center">
+                <div class="search-area-burger-menu">
+                  <app-search-area></app-search-area>
+                </div>
+              </div>
               <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
