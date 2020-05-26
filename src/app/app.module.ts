@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './layout/home/home.module';
-import { ProductsComponent } from './layout/products/all-products';
+import { ProductsComponent } from './layout/products/products';
 import { HeaderModule } from './layout/header/header.module';
 import { FooterComponent } from './layout/footer/footer';
 import { NotFoundComponent } from './layout/not-found/not-found';
