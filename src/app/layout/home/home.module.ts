@@ -8,6 +8,7 @@ import { BlogItemBoxComponent } from './blog-item-box/blog-item-box';
 import { ServicesBoxComponent } from './services-box/services-box';
 import { MaterialModule } from 'src/app/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
+    AppRoutingModule
   ],
   bootstrap: [HomeComponent]
 })
