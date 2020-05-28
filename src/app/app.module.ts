@@ -21,11 +21,11 @@ import { AuthModule } from './layout/auth/auth.module';
 import { HeaderComponent } from './layout/header/header';
 import { ProductsService } from './shared/services/products.service';
 import { AdminModule } from './layout/admin/admin.module';
+import { ProductsModule } from './layout/products/products.module';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ProductsComponent,
     NotFoundComponent
   ],
   imports: [
@@ -43,6 +43,7 @@ import { AdminModule } from './layout/admin/admin.module';
     AuthModule,
     AdminModule,
     HomeModule,
+    ProductsModule
   ],
   providers: [
     AuthService,
@@ -50,8 +51,7 @@ import { AdminModule } from './layout/admin/admin.module';
   ],
   bootstrap: [
     AppComponent,
-    HeaderComponent,
-    ProductsService
+    HeaderComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
