@@ -12,30 +12,13 @@ export class ProductsService {
 
   getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.firebase}/products.json`, {})
-      .pipe(map(response => response.map(product => Object.assign(new Product(), product))));
+      // .pipe(map(response => response.map(product => Object.assign(new Product(), product))));
+      .pipe(map(response => this.mapFirebaseResponse(response)));
   }
 
   getFeaturedProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.firebase}/featuredProducts.json`, {})
-      .pipe(map(response => {
-        const r = [];
-        for (const [key, value] of Object.entries(response)) {
-          r.push(Object.assign(new Product(), {
-            id: key,
-            title: value.title,
-            description: value.description,
-            imgUrl: value.imgUrl,
-            dateAdded: value.dateAdded,
-            itemsInStock: value.itemsInStock,
-            price: value.price,
-            resealed: value.resealed,
-            sex: value.sex,
-            categoryList: value.categoryList
-          }));
-        }
-        return r;
-      }
-      ));
+      .pipe(map(response => this.mapFirebaseResponse(response) ));
   }
 
   createProduct(productDto: Product) {
@@ -50,5 +33,24 @@ export class ProductsService {
   getProduct(productId: string): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.firebase}/products/${productId}.json`, {})
       .pipe(map(response => Object.assign(new Product(), response)));
+  }
+
+  private mapFirebaseResponse(data: Array<any>) {
+    const response = [];
+    for (const [key, value] of Object.entries(data)) {
+      response.push(Object.assign(new Product(), {
+        id: key,
+        title: value.title,
+        description: value.description,
+        imgUrl: value.imgUrl,
+        dateAdded: value.dateAdded,
+        itemsInStock: value.itemsInStock,
+        price: value.price,
+        resealed: value.resealed,
+        sex: value.sex,
+        categoryList: value.categoryList
+      }));
+    }
+    return response;
   }
 }
