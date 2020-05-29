@@ -5,6 +5,8 @@ import { SERVICES_LIST } from './models/services-list.model';
 import { FT_CATEGORY_LG_LIST } from './models/featured-category-lg-list';
 import { FT_CATEGORY_SM_LIST } from './models/featured-category-sm-list';
 import { Product } from 'src/app/shared/models/product.model';
+import { BlogService } from 'src/app/shared/services/blog.service';
+import { Article } from 'src/app/shared/models/article.model';
 
 @Component({
   selector: 'app-home',
@@ -15,16 +17,26 @@ export class HomeComponent implements OnInit, OnDestroy {
   listOfLargeCategories = FT_CATEGORY_LG_LIST;
   listOfSmallCategories = FT_CATEGORY_SM_LIST;
   featuredProducts: Product[];
-  productsServiceSubscription: Subscription;
 
-  constructor(private productsService: ProductsService) { }
+  productsServiceSubscription: Subscription;
+  blogServiceSubscription: Subscription;
+  articles: Article[];
+
+
+  constructor(
+    private productsService: ProductsService,
+    private blogService: BlogService
+    ) { }
 
   ngOnInit(): void {
-    this.productsServiceSubscription = this.productsService.getFeaturedProducts().subscribe(res => this.featuredProducts = res);
+    this.productsServiceSubscription = this.productsService.getFeaturedProducts().subscribe(r => this.featuredProducts = r);
+    console.log(this.articles);
+    this.blogServiceSubscription = this.blogService.getBlogArticles().subscribe(r => {console.log(r);this.articles = r});
   }
 
   ngOnDestroy() {
     if (this.productsServiceSubscription) { this.productsServiceSubscription.unsubscribe(); }
+    if (this.blogServiceSubscription) { this.blogServiceSubscription.unsubscribe(); }
   }
 
 }

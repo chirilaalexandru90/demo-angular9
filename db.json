@@ -691,5 +691,25 @@
     "is_admin": true,
     "is_authenticated": true,
     "name": "Ascultewa Listpro"
+  },
+  "blog": {
+    "-Blog-M7w07JluV0aWF67bv03": {
+      "date": "2020-05-14T21:00:00.000Z",
+      "img": "img1.jpg",
+      "title": "Where Trends Going Next",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In atque, qui cum voluptatem quibusdam dolore veniam, consectetur adipisicing elit"
+    },
+    "-Blog-M7w07JluV0aWF67bv0r": {
+      "date": "2020-05-15T21:00:00.000Z",
+      "img": "img2.jpg",
+      "title": "High For This",
+      "content": "Morem Dorelm Lorem ipsum dolor sit amet, consectetur adipisicing elit. In atque, qui cum voluptatem quibusdam dolore veniam dolor sit amet"
+    },
+    "-Blog-M7w07JluV0aWF67bv0e": {
+      "date": "2020-05-16T21:00:00.000Z",
+      "img": "img3.jpg",
+      "title": "Best Products of 2017",
+      "content": "Nomore Lorem ipsum dolor sit amet, consectetur adipisicing elit. In atque, qui cum voluptatem quibusdam dolore veniam, consectetur adipisicing elit"
+    }
   }
 }

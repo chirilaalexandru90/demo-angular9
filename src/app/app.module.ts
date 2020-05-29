@@ -22,6 +22,7 @@ import { HeaderComponent } from './layout/header/header';
 import { ProductsService } from './shared/services/products.service';
 import { AdminModule } from './layout/admin/admin.module';
 import { ProductsModule } from './layout/products/products.module';
+import { BlogService } from './shared/services/blog.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { ProductsModule } from './layout/products/products.module';
   ],
   providers: [
     AuthService,
-    ProductsService
+    ProductsService,
+    BlogService
   ],
   bootstrap: [
     AppComponent,
