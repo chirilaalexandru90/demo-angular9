@@ -48,10 +48,7 @@ export class NewProductComponent implements OnInit {
   onSubmit() {
     this.productsService.createProduct(this.newProductForm.value)
       .subscribe(
-        res => {
-          console.log(res);
-          this.newProductForm.reset();
-        },
+        () => this.newProductForm.reset(),
         err => console.log(err));
   }
 }

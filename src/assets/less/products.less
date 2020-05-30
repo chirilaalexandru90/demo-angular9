@@ -6,7 +6,7 @@
 
 .category-sidebar {
   & .category-title {
-    border-bottom: 2px solid $gray;
+    border-bottom: 2px solid @gray;
 
     & .title {
       color: #666;
@@ -26,7 +26,7 @@
   position: relative;
 
   & input {
-    background: $gray;
+    background: @gray;
     border: none;
     box-shadow: none;
     border-radius: 0;
@@ -84,7 +84,7 @@
           padding: 0 15px;
 
           & li {
-            border-top: 1px solid $border-color;
+            border-top: 1px solid @border-color;
 
             & a {}
           }
@@ -219,7 +219,7 @@
       & .irs-from,
       & .irs-to {
         border-radius: 0;
-        background-color: $heading-color;
+        background-color: @heading-color;
       }
 
       & .irs-bar {
@@ -274,8 +274,8 @@
           width: 34px;
           font-size: 16px;
           display: block;
-          background-color: $gray;
-          color: $body-color;
+          background-color: @gray;
+          color: @body-color;
           .transition(0.3s);
 
           &:hover {
@@ -317,7 +317,7 @@
 .category-product {}
 
 .product-option {
-  background-color: $gray;
+  background-color: @gray;
   padding: 0 30px;
   height: 50px;
 
@@ -342,9 +342,9 @@
 
       & a {
         font-size: 20px;
-        color: $body-color;
+        color: @body-color;
 
-        @media @$xs {
+        @media @xs {
           font-size: 16px;
         }
 
@@ -383,11 +383,11 @@
       width: 35px;
       height: 35px;
       line-height: 35px;
-      border: 1px solid $border-color;
+      border: 1px solid @border-color;
       text-align: center;
       font-size: 14px;
       font-weight: 700;
-      color: $body-color;
+      color: @body-color;
     }
 
     &.active,
@@ -402,8 +402,6 @@
   }
 }
 
-
-
 /*===== Shop Page =====*/
 
 .product-filter {
@@ -416,7 +414,7 @@
 
     & .nice-select {
       float: none;
-      border: 1px solid $border-color;
+      border: 1px solid @border-color;
       width: 150px;
 
       & .current {}
@@ -433,3 +431,4 @@
     }
   }
 }
+

@@ -29,9 +29,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     ) { }
 
   ngOnInit(): void {
-    this.productsServiceSubscription = this.productsService.getFeaturedProducts().subscribe(r => this.featuredProducts = r);
-    console.log(this.articles);
-    this.blogServiceSubscription = this.blogService.getBlogArticles().subscribe(r => {console.log(r);this.articles = r});
+    this.getFeaturedProducts();
+    this.getBlogArticles();
+  }
+
+  private getFeaturedProducts() {
+    this.productsServiceSubscription = this.productsService.getFeaturedProducts().subscribe(
+      r => this.featuredProducts = r,
+      e => console.log(e));
+  }
+  private getBlogArticles() {
+    this.blogServiceSubscription = this.blogService.getBlogArticles().subscribe(
+      r => this.articles = r,
+      e => console.log(e));
+
   }
 
   ngOnDestroy() {
