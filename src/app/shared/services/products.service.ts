@@ -10,7 +10,7 @@ export class ProductsService {
   firebase = 'https://emart-store.firebaseio.com';
   constructor(private http: HttpClient) { }
 
-  getAllProducts(): Observable<Product[]> {
+  getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.firebase}/products.json`, {})
       // .pipe(map(response => response.map(product => Object.assign(new Product(), product))));
       .pipe(map(response => this.mapFirebaseResponse(response)));
@@ -22,12 +22,11 @@ export class ProductsService {
   }
 
   createProduct(productDto: Product) {
-    // return this.http.post<void>(`${this.endpoint}/products`, productDto);
     return this.http.post(`${this.firebase}/products.json`, productDto);
   }
 
-  modifyProduct() {
-
+  modifyProduct(id: string, productDto: Product) {
+    return this.http.put(`${this.firebase}/products` + '/' + id + '.json', productDto);
   }
 
   getProduct(productId: string): Observable<Product[]> {

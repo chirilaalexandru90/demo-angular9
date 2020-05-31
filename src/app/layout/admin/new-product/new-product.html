@@ -9,6 +9,20 @@
             <hr class="lines">
 
             <h4>This is a suggestion input form, you can still edit fields</h4>
+
+            <mat-checkbox [checked]="edit" (click)="setEdit()">EDIT? </mat-checkbox>
+            <p *ngIf="edit">Try this ID: 'demoProduct'</p>
+
+            <div *ngIf="edit">
+              <mat-form-field>
+                <mat-label>ID</mat-label>
+                <input type="text" matInput placeholder="Product ID" formControlName="id">
+                <mat-error>Field is empty</mat-error>
+                <!-- <mat-hint></mat-hint> -->
+              </mat-form-field>
+            </div>
+
+
             <mat-form-field>
               <mat-label>Title</mat-label>
               <input type="text" matInput placeholder="Product title" formControlName="title">
@@ -67,7 +81,10 @@
               <input type="text" matInput placeholder="radio true false" formControlName="resealed">
             </mat-form-field>
 
-            <button class="btn btn-common" type="submit" mat-raised-button color="primary">Add</button>
+            <button class="btn btn-common" type="submit" mat-raised-button color="primary">
+              <span *ngIf="!edit">Add</span>
+              <span *ngIf="edit">Update</span>
+            </button>
             <br>
           </form>
         </div>

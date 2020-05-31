@@ -9,12 +9,16 @@ import { ProductsService } from '../../../shared/services/products.service';
 
 export class NewProductComponent implements OnInit {
   newProductForm: FormGroup;
+  edit = false;
   constructor(
     private productsService: ProductsService
   ) { }
 
   ngOnInit(): void {
     this.newProductForm = new FormGroup({
+      id: new FormControl('', {
+        validators: [Validators.required]
+      }),
       title: new FormControl('GeneratedTitle1', {
         validators: [Validators.required]
       }),
@@ -46,9 +50,30 @@ export class NewProductComponent implements OnInit {
   }
 
   onSubmit() {
-    this.productsService.createProduct(this.newProductForm.value)
-      .subscribe(
-        () => this.newProductForm.reset(),
-        err => console.log(err));
+    if (this.getFormId() === '') {
+      this.productsService.createProduct(this.newProductForm.value)
+        .subscribe(
+          () => this.newProductForm.reset(),
+          err => console.log(err));
+    } else {
+      if (this.getFormId()) {
+        this.productsService
+          .modifyProduct(this.getFormId(), this.newProductForm.value)
+          .subscribe(
+            r => console.log(r),
+            e => console.log(e));
+        this.edit = false;
+        this.newProductForm.get('id').reset();
+      }
+    }
+  }
+
+  setEdit() {
+    this.edit = !this.edit;
+    this.newProductForm.get('id').reset();
+  }
+
+  private getFormId() {
+    return this.newProductForm.value.id;
   }
 }
