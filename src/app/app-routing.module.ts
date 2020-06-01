@@ -8,6 +8,7 @@ import { LoginComponent } from './layout/auth/login/login';
 import { MyAccountComponent } from './layout/account/my-account';
 import { AuthGuard } from './layout/auth/auth.guard';
 import { NewProductComponent } from './layout/admin/new-product/new-product';
+import { ProductDetailsComponent } from './layout/product-details/product-details';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
     path: 'new-product',
     component: NewProductComponent
   },
-  { path: '**', component: NotFoundComponent },
+  { path: 'product-details', component: ProductDetailsComponent},
+  { path: '**', component: NotFoundComponent }
 ];
 @NgModule({
   declarations: [],

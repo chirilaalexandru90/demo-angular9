@@ -60,7 +60,7 @@ export class NewProductComponent implements OnInit {
         this.productsService
           .modifyProduct(this.getFormId(), this.newProductForm.value)
           .subscribe(
-            r => console.log(r),
+            () => {},
             e => console.log(e));
         this.edit = false;
         this.newProductForm.get('id').reset();

@@ -23,11 +23,13 @@ import { ProductsService } from './shared/services/products.service';
 import { AdminModule } from './layout/admin/admin.module';
 import { ProductsModule } from './layout/products/products.module';
 import { BlogService } from './shared/services/blog.service';
+import { ProductDetailsComponent } from './layout/product-details/product-details';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,7 @@ import { BlogService } from './shared/services/blog.service';
     AuthModule,
     AdminModule,
     HomeModule,
-    ProductsModule
+    ProductsModule,
   ],
   providers: [
     AuthService,
