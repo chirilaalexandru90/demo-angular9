@@ -10,6 +10,7 @@ export class AuthService {
   private user: User;
   private isAuthentificated = false;
   userIsLoggedIn = new Subject<boolean>();
+  tokenId: string;
 
   constructor(private router: Router) { }
 
@@ -23,7 +24,11 @@ export class AuthService {
   login(authData: AuthData) {
     firebase.auth()
       .signInWithEmailAndPassword(authData.email, authData.password)
-      .then(() => this.authSuccessfully())
+      .then(() => {
+        firebase.auth().currentUser.getIdToken()
+          .then((tk: string) => this.tokenId = tk);
+        this.authSuccessfully();
+      })
       .catch(error => console.log(error));
   }
 
@@ -45,5 +50,12 @@ export class AuthService {
     this.isAuthentificated = true;
     this.userIsLoggedIn.next(true);
     this.router.navigate(['home']);
+  }
+
+  getTokenId() {
+    firebase.auth().currentUser.getIdToken()
+      .then((t: string) => this.tokenId = t);
+    console.log(this.tokenId);
+    return this.tokenId;
   }
 }

@@ -24,6 +24,7 @@ import { AdminModule } from './layout/admin/admin.module';
 import { ProductsModule } from './layout/products/products.module';
 import { BlogService } from './shared/services/blog.service';
 import { ProductDetailsComponent } from './layout/product-details/product-details';
+import { CartService } from './shared/services/cart.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { ProductDetailsComponent } from './layout/product-details/product-detail
   providers: [
     AuthService,
     ProductsService,
-    BlogService
+    BlogService,
+    CartService
   ],
   bootstrap: [
     AppComponent,
