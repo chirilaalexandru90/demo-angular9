@@ -3,10 +3,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Product } from '../models/product.model';
 
 @Injectable()
 export class CartService {
-  firebase = 'https://emart-store.firebaseio.com';
+  private firebase = 'https://emart-store.firebaseio.com';
+  numberOfCartProducts = new BehaviorSubject(0);
 
   constructor(
     private http: HttpClient,
@@ -14,8 +16,8 @@ export class CartService {
   ) { }
 
   getCartItems(): Observable<any[]> {
-    const tokenId = this.authService.getTokenId();
-    return this.http.get<any[]>(`${this.firebase}/cart.json?auth=${tokenId}`, {})
+    // const tokenId = this.authService.getTokenId();
+    return this.http.get<any[]>(`${this.firebase}/cart.json`, {})
       .pipe(map(response => this.mapFirebaseResponse(response)));
   }
 
@@ -24,30 +26,21 @@ export class CartService {
   }
 
   private mapFirebaseResponse(data: Array<any>) {
-    const response = [
-      {
-        userId: 'a',
-        cartItemsIds: [1, 2, 3]
-      },
-      {
-        userId: 'b',
-        cartItemsIds: [4, 5, 6]
-      }
-    ];
-    // for (const [key, value] of Object.entries(data)) {
-    //   response.push(Object.assign(new Product(), {
-    //     id: key,
-    //     title: value.title,
-    //     description: value.description,
-    //     imgUrl: value.imgUrl,
-    //     dateAdded: value.dateAdded,
-    //     itemsInStock: value.itemsInStock,
-    //     price: value.price,
-    //     resealed: value.resealed,
-    //     sex: value.sex,
-    //     categoryList: value.categoryList
-    //   }));
-    // }
+    const response = [];
+    for (const [key, value] of Object.entries(data)) {
+      response.push(Object.assign(new Product(), {
+        id: key,
+        title: value.title,
+        description: value.description,
+        imgUrl: value.imgUrl,
+        dateAdded: value.dateAdded,
+        itemsInStock: value.itemsInStock,
+        price: value.price,
+        resealed: value.resealed,
+        sex: value.sex,
+        categoryList: value.categoryList
+      }));
+    }
     return response;
   }
 }

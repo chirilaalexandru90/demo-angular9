@@ -5,10 +5,10 @@
       <a href="#" class="cart-icon cart-btn"><i class="icon-basket"></i><span class="cart-label">{{ cartItemsNumber }}</span></a>
       <div class="cart-box">
         <div class="popup-container">
-          <app-cart-entry></app-cart-entry>
+          <app-cart-entry [cartItems]="cartItems"></app-cart-entry>
           <div class="summary">
             <div class="subtotal">Sub Total</div>
-            <div class="price-s">$210.5</div>
+            <div class="price-s">${{ itemsValue }}</div>
           </div>
           <div class="cart-buttons">
             <a href="#" class="btn btn-border-2">View Cart</a>

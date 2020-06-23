@@ -1,11 +1,12 @@
-<div class="cart-entry">
+<div class="cart-entry" *ngFor="let item of cartItems">
+
   <a href="#" class="image">
-    <img src="assets/img/products/product-menu-1.jpg" alt="">
+    <img src="assets/img/products/{{ item.imgUrl }}" alt="">
   </a>
   <div class="content">
-    <a href="#" class="title">Pullover Batwing</a>
+    <a href="#" class="title">{{ item.title}}</a>
     <p class="quantity">Quantity: 3</p>
-    <span class="price">$45.00</span>
+    <span class="price">${{ item.price }}</span>
   </div>
   <div class="button-x">
     <i class="icon-close"></i>

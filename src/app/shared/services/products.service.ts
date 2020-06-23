@@ -6,8 +6,8 @@ import { Product } from '../models/product.model';
 
 @Injectable()
 export class ProductsService {
-  endpoint = 'http://localhost:4201';
-  firebase = 'https://emart-store.firebaseio.com';
+  // private be = 'http://localhost:4201';
+  private firebase = 'https://emart-store.firebaseio.com';
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {

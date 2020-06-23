@@ -1,12 +1,95 @@
 {
-  "cart": [{
-    "description": "description - Lorem ipsum dolor sit amet, consectetur adipisicing Commodo...",
-    "imgUrl": "img-08.jpg",
-    "itemsInStock": 2,
-    "price": "120",
-    "productId": 14,
-    "title": "Red Pants"
-  }],
+  "cart": {
+    "-M7w07JluV0aWF67bv03": {
+      "categoryList": ["pants"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 1",
+      "imgUrl": "img-01.jpg",
+      "itemsInStock": 23,
+      "price": 24.33,
+      "resealed": true,
+      "sex": "man",
+      "title": "Product 1"
+    },
+    "-M7w07JluV0aWF67bv05": {
+      "categoryList": ["pants"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 2",
+      "imgUrl": "img-02.jpg",
+      "itemsInStock": 23,
+      "price": 24.33,
+      "resealed": true,
+      "sex": "woman",
+      "title": "Product 2"
+    },
+    "-M7w07JluV0aWF67bv07": {
+      "categoryList": ["pants"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 3",
+      "imgUrl": "img-03.jpg",
+      "itemsInStock": 23,
+      "price": 34.33,
+      "resealed": true,
+      "sex": "man",
+      "title": "Product 3"
+    },
+    "-M7w07JluV0aWF67bv0M": {
+      "categoryList": ["pants", "shorts"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 4",
+      "imgUrl": "img-04.jpg",
+      "itemsInStock": 23,
+      "price": 24.63,
+      "resealed": true,
+      "sex": "woman",
+      "title": "Product 4"
+    },
+    "-M7wA8yEOdnWa2FUJQz4": {
+      "categoryList": ["pants", "shorts"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 5",
+      "imgUrl": "img-05.jpg",
+      "itemsInStock": 30,
+      "price": 30.99,
+      "resealed": false,
+      "sex": "woman",
+      "title": "Product 5"
+    },
+    "-M7wA8yEOdnWa2FUJQz6": {
+      "categoryList": ["pants", "shorts"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 6",
+      "imgUrl": "img-06.jpg",
+      "itemsInStock": 30,
+      "price": 31.99,
+      "resealed": false,
+      "sex": "woman",
+      "title": "Product 6"
+    },
+    "-M7wA8yEOdnWa2FUJQz8": {
+      "categoryList": ["pants", "shorts"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Featured Pr 7",
+      "imgUrl": "img-07.jpg",
+      "itemsInStock": 30,
+      "price": 13.90,
+      "resealed": false,
+      "sex": "woman",
+      "tag": "new",
+      "title": "Product 7"
+    },
+    "-M7wA8yEOdnWa2FUJQzs": {
+      "categoryList": ["pants", "shorts"],
+      "dateAdded": "2020-05-14T21:00:00.000Z",
+      "description": "Product 8",
+      "imgUrl": "img-08.jpg",
+      "itemsInStock": 30,
+      "price": 43.99,
+      "resealed": false,
+      "sex": "woman",
+      "title": "Product 8"
+    }
+  },
   "featuredProducts": {
     "-M7w07JluV0aWF67bv03": {
       "categoryList": ["pants"],
@@ -99,13 +182,13 @@
     }
   },
   "products": {
-    "-M7w07JluV0aWF67bv03": {
+    "demoProduct": {
       "categoryList": ["pants"],
       "dateAdded": "2020-05-14T21:00:00.000Z",
       "description": "Featured Pr 1",
       "imgUrl": "img-01.jpg",
       "itemsInStock": 23,
-      "price": 24.33,
+      "price": 21.33,
       "resealed": true,
       "sex": "man",
       "title": "Product 1"

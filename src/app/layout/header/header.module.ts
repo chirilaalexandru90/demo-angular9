@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header';
 import { NgModule } from '@angular/core';
 import { SearchAreaComponent } from './search-area/search-area';
-import { UserCartComponent } from './user-cart/user-cart';
 import { LogoAndNavigationComponent } from './logo-and-navigation/logo-and-navigation';
-import { CartEntry } from './user-cart/cart-entry/cart-entry';
+import { CartEntryComponent } from './user-cart/cart-entry/cart-entry';
 import { MobileMenuComponent } from './logo-and-navigation/mobile-menu/mobile-menu';
 import { MaterialModule } from 'src/app/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { UserCartComponent } from './user-cart/user-cart';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     UserCartComponent,
     MobileMenuComponent,
     LogoAndNavigationComponent,
-    CartEntry
+    CartEntryComponent
   ],
   imports: [
     CommonModule,
