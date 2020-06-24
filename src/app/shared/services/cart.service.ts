@@ -9,6 +9,7 @@ import { Product } from '../models/product.model';
 export class CartService {
   private firebase = 'https://emart-store.firebaseio.com';
   numberOfCartProducts = new BehaviorSubject(0);
+  refreshData = new BehaviorSubject(false);
 
   constructor(
     private http: HttpClient,
@@ -21,7 +22,7 @@ export class CartService {
       .pipe(map(response => this.mapFirebaseResponse(response)));
   }
 
-  addToCart(cartItem: any) {
+  addToCart(cartItem: Product) {
     return this.http.post(`${this.firebase}/cart.json`, cartItem);
   }
 
@@ -29,7 +30,7 @@ export class CartService {
     const response = [];
     for (const [key, value] of Object.entries(data)) {
       response.push(Object.assign(new Product(), {
-        id: key,
+        id: value.id,
         title: value.title,
         description: value.description,
         imgUrl: value.imgUrl,

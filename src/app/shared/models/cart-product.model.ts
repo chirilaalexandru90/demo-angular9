@@ -1,5 +1,4 @@
-import { CartProduct } from './cart-product.model';
-export class Product {
+export class CartProduct {
   id: number = null;
   title = '';
   description = '';
@@ -11,6 +10,7 @@ export class Product {
   itemsInStock: number = null;
   dateAdded?: Date = null;
   resealed: boolean = null;
+  quantity = 1;
 
   constructor(
     id?: number,
@@ -22,7 +22,8 @@ export class Product {
     categoryList?: Array<string>,
     itemsInStock?: number,
     dateAdded?: Date,
-    resealed?: boolean
+    resealed?: boolean,
+    quantity?: number
   ) {
     this.id = id ? id : this.id;
     this.title = title ? title : this.title;
@@ -34,21 +35,6 @@ export class Product {
     this.itemsInStock = itemsInStock ? itemsInStock : this.itemsInStock;
     this.dateAdded = dateAdded ? dateAdded : this.dateAdded;
     this.resealed = resealed ? resealed : this.resealed;
-  }
-
-  toCartProduct() {
-    return new CartProduct(
-      this.id,
-      this.title,
-      this.description,
-      this.imgUrl,
-      this.price,
-      this.sex,
-      this.categoryList,
-      this.itemsInStock,
-      this.dateAdded,
-      this.resealed,
-      1
-    );
+    this.quantity = quantity ? quantity : this.quantity;
   }
 }

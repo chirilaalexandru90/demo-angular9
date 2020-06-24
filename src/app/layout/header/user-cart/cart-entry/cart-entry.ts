@@ -1,3 +1,4 @@
+import { CartProduct } from 'src/app/shared/models/cart-product.model';
 import { Product } from 'src/app/shared/models/product.model';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class CartEntryComponent implements OnInit {
   @Input()
-  cartItems: Product[];
+  cartItems: CartProduct;
 
   itemsValue = 0;
 
