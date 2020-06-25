@@ -21,7 +21,6 @@ export class ProductItemComponent implements OnInit {
     this.cartService.addToCart(product)
       .subscribe(
         (elem) => {
-          console.log(elem);
           this.cartService.refreshData.next(true);
         },
         e => console.log(e));

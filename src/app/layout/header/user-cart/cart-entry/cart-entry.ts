@@ -11,8 +11,6 @@ export class CartEntryComponent implements OnInit {
   @Input()
   cartItems: CartProduct[];
 
-  itemsValue = 0;
-
   constructor() { }
 
   ngOnInit(): void {

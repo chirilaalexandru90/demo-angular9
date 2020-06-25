@@ -17,7 +17,7 @@ export class UserCartComponent implements OnInit, OnDestroy {
 
   cartItems: Product[];
   cartItemsNumber = 0;
-  itemsValue: number;
+  itemsValue;
   groupedCartItems: CartProduct[];
 
   private cartServiceSubscription: Subscription;
@@ -34,7 +34,6 @@ export class UserCartComponent implements OnInit, OnDestroy {
     this.getCartDetails();
     this.getItemsNumber();
     this.refreshCartDetails();
-
   }
 
   private getItemsNumber() {
@@ -44,7 +43,7 @@ export class UserCartComponent implements OnInit, OnDestroy {
     this.cartServiceSubscription = this.cartService.getCartItems().subscribe(r => {
       this.cartItems = r;
       this.cartService.numberOfCartProducts.next(this.cartItems.length);
-      this.itemsValue = this.cartItems.reduce((a, n) => a + n.price, 0);
+      this.itemsValue = this.cartItems.reduce((a, n) => a + n.price, 0).toFixed(2);
       this.groupCartItems(this.cartItems);
     });
   }
@@ -69,8 +68,6 @@ export class UserCartComponent implements OnInit, OnDestroy {
     // tslint:disable-next-line: forin
     for (const key in sameItemCounterMap) {
       for (const item of cartProducts) {
-        console.log('key', key);
-        console.log('item', item);
         if (key === item.id.toString()) {
           this.groupedCartItems.push(item);
           break;
@@ -85,7 +82,6 @@ export class UserCartComponent implements OnInit, OnDestroy {
         }
       }
     });
-    console.log('final', this.groupedCartItems);
   }
 
   register() {
