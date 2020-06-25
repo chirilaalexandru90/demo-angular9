@@ -5,7 +5,10 @@
       <a class="cart-icon cart-btn"><i class="icon-basket"></i><span class="cart-label">{{ cartItemsNumber }}</span></a>
       <div class="cart-box">
         <div class="popup-container">
-          <app-cart-entry [cartItems]="cartItems"></app-cart-entry>
+          <app-cart-entry
+            *ngIf="groupedCartItems"
+            [cartItems]="groupedCartItems">
+          </app-cart-entry>
           <div class="summary">
             <div class="subtotal">Sub Total</div>
             <div class="price-s">${{ itemsValue }}</div>

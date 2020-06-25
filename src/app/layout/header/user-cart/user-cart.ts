@@ -52,26 +52,40 @@ export class UserCartComponent implements OnInit, OnDestroy {
     this.cartChangeSubscription = this.cartService.refreshData.subscribe((cartWasChanged: boolean) => {
       if (cartWasChanged) {
         this.getCartDetails();
-        this.groupCartItems(this.cartItems);
       }
     });
   }
 
   private groupCartItems(products: Product[]) {
     const cartProducts = products.map(p => p.toCartProduct());
-    const productsIds = cartProducts.map(t => t.id);
     this.groupedCartItems = [];
 
-    if (products && products.length >= 0) {
-      // cartProducts.forEach((cartProduct: CartProduct, index) => {
-      //   if (productsIds.includes(this.groupedCartItems[index].id)) {
-          // cartProduct.quantity += 1;
-        // } else {
-          // this.groupedCartItems.push(cartProduct);
-      //   }
-      // });
+    const sameItemCounterMap = {};
+    cartProducts.forEach((obj) => {
+      const key = obj.id;
+      sameItemCounterMap[key] = (sameItemCounterMap[key] || 0) + 1;
+    });
+
+    // tslint:disable-next-line: forin
+    for (const key in sameItemCounterMap) {
+      for (const item of cartProducts) {
+        console.log('key', key);
+        console.log('item', item);
+        if (key === item.id.toString()) {
+          this.groupedCartItems.push(item);
+          break;
+        }
+      }
     }
-    console.log(3, this.groupedCartItems);
+
+    this.groupedCartItems.forEach((item, index) => {
+      for (const id in sameItemCounterMap) {
+        if (item.id.toString() === id) {
+          this.groupedCartItems[index].quantity = sameItemCounterMap[id];
+        }
+      }
+    });
+    console.log('final', this.groupedCartItems);
   }
 
   register() {

@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class CartEntryComponent implements OnInit {
   @Input()
-  cartItems: CartProduct;
+  cartItems: CartProduct[];
 
   itemsValue = 0;
 
