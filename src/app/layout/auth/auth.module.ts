@@ -1,3 +1,4 @@
+import { LoadingSpinnerComponent } from './../../shared/components/loading-spinner/loading-spinner';
 import { SignupComponent } from './signup/signup';
 import { LoginComponent } from './login/login';
 import { CommonModule } from '@angular/common';
@@ -10,7 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     CommonModule,

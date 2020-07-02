@@ -9,6 +9,7 @@ import { AuthService } from '../auth.service';
 export class SignupComponent implements OnInit {
   maxDate: Date;
   signupForm: FormGroup;
+  isLoading = false;
 
   constructor(
     private authService: AuthService
@@ -41,13 +42,18 @@ export class SignupComponent implements OnInit {
     if (!this.signupForm.valid) {
       return;
     }
+    this.isLoading = true;
     this.authService.registerUser({
       email: this.signupForm.value.email,
       password: this.signupForm.value.password
     }).subscribe(r => {
       this.signupForm.reset();
+      this.isLoading = false;
+
     }, error => {
       console.log(error);
+      this.isLoading = false;
+
     });
 
   }
