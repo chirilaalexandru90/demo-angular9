@@ -38,9 +38,16 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
+    if (!this.signupForm.valid) {
+      return;
+    }
     this.authService.registerUser({
       email: this.signupForm.value.email,
       password: this.signupForm.value.password
+    }).subscribe(r => {
+      this.signupForm.reset();
+    }, error => {
+      console.log(error);
     });
 
   }
