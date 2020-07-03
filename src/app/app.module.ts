@@ -25,6 +25,8 @@ import { ProductsModule } from './layout/products/products.module';
 import { BlogService } from './shared/services/blog.service';
 import { ProductDetailsComponent } from './layout/product-details/product-details';
 import { CartService } from './shared/services/cart.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +50,7 @@ import { CartService } from './shared/services/cart.service';
     AdminModule,
     HomeModule,
     ProductsModule,
+    MatSnackBarModule
   ],
   providers: [
     AuthService,

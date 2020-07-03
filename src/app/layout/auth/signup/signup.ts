@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,8 @@ export class SignupComponent implements OnInit {
   isLoading = false;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -49,13 +51,30 @@ export class SignupComponent implements OnInit {
     }).subscribe(r => {
       this.signupForm.reset();
       this.isLoading = false;
-
+      this.openSnackBar('Registered successfully', 'Close', 'toast-successfully', 2000);
     }, error => {
-      console.log(error);
+      console.log(error.error);
+      this.openSnackBar(
+        `Error code ${error.error.error.code}  - ${error.error.error.message}`,
+        'Close',
+        'toast-danger',
+        200000
+      );
       this.isLoading = false;
-
     });
-
   }
 
+  private openSnackBar(
+    message: string,
+    action: string,
+    cssClass: string,
+    duration: number
+  ) {
+    this.snackBar.open(message, action, {
+      duration,
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      panelClass: [`${cssClass}`]
+    });
+  }
 }
