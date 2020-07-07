@@ -1,5 +1,5 @@
 import { AuthService } from './../auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToasterService } from 'src/app/shared/services/toaster-service';
 
@@ -7,8 +7,9 @@ import { ToasterService } from 'src/app/shared/services/toaster-service';
   selector: 'app-login',
   templateUrl: './login.html'
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
+  isLoading: boolean;
 
   constructor(
     private authService: AuthService,
@@ -28,9 +29,24 @@ export class LoginComponent implements OnInit {
         200000
       );
     }
+
+    this.isLoading = true;
+
     this.authService.login({
       email: this.loginForm.value.email,
       password: this.loginForm.value.password
+    }).subscribe(() => {
+      this.isLoading = false;
+      this.authService.authSuccessfully();
+    }, error => {
+      this.toasterService.displayToaster(
+        `Error code ${error.error.error.code}  - ${error.error.error.message}`,
+        'Close',
+        'toast-danger',
+        200000
+      );
+
+      this.isLoading = false;
     });
   }
 
@@ -43,5 +59,9 @@ export class LoginComponent implements OnInit {
         validators: [Validators.required]
       })
     });
+  }
+
+  ngOnDestroy() {
+    this.toasterService.snackBar.dismiss();
   }
 }

@@ -3,7 +3,18 @@
     <div class="col-md-12 col-xs-12">
       <section class="section">
         <div class="sign-up-form">
-          <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" [formGroup]="loginForm"
+          <div *ngIf="isLoading"
+            fxLayout="column"
+            fxLayoutAlign="center center"
+            fxLayoutGap="10px">
+            <app-loading-spinner></app-loading-spinner>
+          </div>
+          <form
+            *ngIf="!isLoading"
+            fxLayout="column"
+            fxLayoutAlign="center center"
+            fxLayoutGap="10px"
+            [formGroup]="loginForm"
             (ngSubmit)="onSubmit()">
             <h2 class="section-title">Log In</h2>
             <hr class="lines">
