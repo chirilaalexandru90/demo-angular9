@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { ToasterService } from 'src/app/shared/services/toaster-service';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private snackBar: MatSnackBar
+    private toasterService: ToasterService
   ) { }
 
   ngOnInit(): void {
@@ -42,39 +42,33 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     if (!this.signupForm.valid) {
+      this.toasterService.displayToaster(
+        `All fields must be completed`,
+        'Close',
+        'toast-danger',
+        200000
+      );
       return;
     }
+
     this.isLoading = true;
+
     this.authService.registerUser({
       email: this.signupForm.value.email,
       password: this.signupForm.value.password
     }).subscribe(r => {
       this.signupForm.reset();
       this.isLoading = false;
-      this.openSnackBar('Registered successfully', 'Close', 'toast-successfully', 2000);
+      this.toasterService.displayToaster('Registered successfully', 'Close', 'toast-successfully', 2000);
     }, error => {
-      console.log(error.error);
-      this.openSnackBar(
+      this.toasterService.displayToaster(
         `Error code ${error.error.error.code}  - ${error.error.error.message}`,
         'Close',
         'toast-danger',
         200000
       );
-      this.isLoading = false;
-    });
-  }
 
-  private openSnackBar(
-    message: string,
-    action: string,
-    cssClass: string,
-    duration: number
-  ) {
-    this.snackBar.open(message, action, {
-      duration,
-      horizontalPosition: 'end',
-      verticalPosition: 'top',
-      panelClass: [`${cssClass}`]
+      this.isLoading = false;
     });
   }
 }
