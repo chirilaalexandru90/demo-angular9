@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { AuthData } from './authData.model';
-import { User } from './user.model';
 import { Subject } from 'rxjs/internal/Subject';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { User } from './user.model';
 
 interface AuthResponseData {
   idToken: string;
@@ -19,8 +19,8 @@ interface AuthResponseData {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private user: User;
   private isAuthentificated = false;
+  user = new Subject<User>();
   userIsLoggedIn = new Subject<boolean>();
   tokenId: string;
   signupURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBMgr3qGUI5G6Y3RiP7agQOjLqzdDqvMAo';
@@ -39,9 +39,11 @@ export class AuthService {
         returnSecureToken: true
       })
       .pipe(catchError(error => {
-        // console.log(error, throwError(error));
         return throwError(error);
-      }));
+      }),
+        tap(res => {
+          this.handleAuthentifiedUser(res.email, res.localId, res.idToken, Number.parseInt(res.expiresIn, 2));
+        }));
   }
 
   login(authData: AuthData) {
@@ -51,20 +53,26 @@ export class AuthService {
         email: authData.email,
         password: authData.password,
         returnSecureToken: true
-      }
-    );
+      })
+      .pipe(catchError(error => {
+        return throwError(error);
+      }),
+        tap(res => {
+          this.handleAuthentifiedUser(res.email, res.localId, res.idToken, Number.parseInt(res.expiresIn, 2));
+        }));
+  }
+
+  private handleAuthentifiedUser(email: string, userId: string, token: string, expiresIn: number) {
+    const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
+    const user = new User(email, userId, token, expirationDate);
+    this.user.next(user);
   }
 
   logout() {
     firebase.auth().signOut();
-    this.user = null;
     this.tokenId = null;
     this.isAuthentificated = false;
     this.userIsLoggedIn.next(false);
-  }
-
-  getUser() {
-    return { ...this.user };
   }
 
   isAuth() {
